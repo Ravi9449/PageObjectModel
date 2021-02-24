@@ -20,10 +20,21 @@ public class FreeCrmTest {
 
 	@BeforeMethod
 	public void setUp() throws Exception {
-		System.setProperty("webdriver.chrome.driver", "/Users/naveenkhunteta/Downloads/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("headless");
 		driver = new ChromeDriver();
-		js = (JavascriptExecutor) driver;
-		driver.get("https://www.freecrm.com/index.html");
+		driver = new ChromeDriver(options);
+		driver.get("https://www.google.com");
+	}
+		//js = (JavascriptExecutor) driver;
+		//driver.get("https://www.freecrm.com/index.html");
+		
+        //System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrome");
+        //ChromeOptions options = new ChromeOptions();
+        //options.addArguments("headless");
+        //driver = new ChromeDriver(options);
+        //driver.get("https://www.google.com");
 	}
 
 	@Test
