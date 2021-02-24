@@ -12,6 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class FreeCrmTest {
 
@@ -35,7 +36,7 @@ public class FreeCrmTest {
         //options.addArguments("headless");
         //driver = new ChromeDriver(options);
         //driver.get("https://www.google.com");
-	}
+	
 
 	@Test
 	public void freeCrmTitleTest() throws InterruptedException, IOException {
